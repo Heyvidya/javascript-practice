@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p{
+          font-size: x-large;
+        }
+
+        button{
+            display:inline-block;
+            padding: 13px 18px 13px 18px;
+            color: grey;
+            background-color: white;
+            border-radius: 360px;
+            border: 1px solid black;
+        }
+
+        body{
+            background-color: white;
+            text-align: center;
+        }
+
+        .reset{
+            display: block;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>Choose Your Color</p>
+    <p>Click a button to change the background.</p>
+    <button onclick="backgroundColor('pink')">Pink</button>
+    <button onclick="backgroundColor('blue')">Blue</button>
+    <button onclick="backgroundColor('green')">Green</button>
+    <button onclick="backgroundColor('purple')">Purple</button>
+    <button class="reset" onclick="backgroundColor('white')">Reset</button>
+
+
+    <script>
+        function backgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

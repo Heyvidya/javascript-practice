@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+           display: flex;
+           justify-content: center;
+           font-weight: bold;
+           font-size: x-large;
+        }
+
+        button{
+            display:block;
+            margin:auto;
+            padding: 13px 18px 13px 18px;
+            border-radius:360px;
+            background-color: white;
+            border: none;
+            
+        }
+
+        body{
+            background-color: grey;
+        }
+    </style>
+
+
+</head>
+
+<body >
+    <p>My First Project</p>
+    <p id="Message">Hello</p>
+    <button id="reset" onclick="showMessage()">Click Me</button>
+
+
+    <script>
+       
+       let clicked = false;
+
+       function showMessage(){
+        if (clicked=== false){
+            document.getElementById("Message").textContent= "You did it";
+            document.getElementById("reset").textContent= "Reset Text";
+            document.body.style.background="pink";
+            clicked=true;
+            
+        }
+
+        else{
+            document.getElementById("Message").textContent= "Hello";
+            document.getElementById("reset").textContent= "Click Me";
+            document.body.style.background="grey";
+            clicked=false;
+        }
+
+
+       }
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>
