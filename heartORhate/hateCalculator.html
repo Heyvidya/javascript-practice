@@ -4,8 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+        <style>
+
+        body{
+            background-image: url("images (3).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            
+
+         }
+
+         h1{
+            margin-top:100px;
+            font-size:xxX-large;
+            color: white;
+            
+         }
+
+
+         p{
+            font-style: italic;
+            color: white;
+         }
+
+         input{
+            width: 250px;
+            border-radius: 360px;
+            border: 1px solid black;
+            height:30px;
+            padding-left: 8px;
+         }
+
+
+         button{
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            padding: 8px 30px;
+            border-radius: 360px;
+            background-color: rgb(4, 0, 1);
+            color: rgb(254, 249, 249);
+            border: 1px solid white;
+
+
+         }
+
+        
+
+
+    </style>
+
 </head>
+
 <body>
+
+    <h1>Hate Calculator💔</h1>
+
+
+    <p>Enter your Name👩</p>
+    <input id="yourName" type="text" placeholder="Enter a name">
+
+    <p>Enter your Partner Name👩‍❤️‍👨</p>
+    <input id="partnerName" type="text" placeholder="Enter a name"
+>
+
+    <button onclick="Calculator()">
+        calculate 
+    </button>
+
+    <p id="result"></p>
+
+
+
+    <script>
+        function Calculator(){
+            let name1 = document.getElementById("yourName").value.trim();
+
+            let name2 =
+            document.getElementById("partnerName").value.trim();
+
+            if (name1 === "" || name2 === ""){
+              document.getElementById("result").textContent =
+            "Please enter both names ❤️";  
+            }
+            
+            else{
+
+                let calculate =Math.floor( Math.random()*101);
+            document.getElementById("result").textContent =  `${name1} and ${name2} have a hate score of ${calculate}% ❤️`;
+
+            }
+            
+        }
+    </script>
     
 </body>
 </html>
