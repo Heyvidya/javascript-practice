@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Manager</title>
+    
+    <style>
+        body{
+            background-color: rgb(238, 238, 237);
+            margin-top: 50px;
+        }
+
+        input{
+            width: 1500px;
+            height: 40px;
+            border:none;
+            padding-left: 8px;
+            
+        }
+
+        button{
+            height: 42px;
+            background-color: white;
+            border: none;
+            padding-right: 10px;
+            font-size: x-large;
+            
+        }
+
+        .task{
+            display: flex;
+            border: none;
+            width:full;
+            border-radius:5px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+            
+        }
+
+
+        .Preview{
+            margin-top: 30px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+        }
+
+
+
+        input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        margin-right: 8px;
+        
+        }
+
+
+        
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="task">
+        <input id="ToDoList" type="text" placeholder="Add new task">
+        <button onclick="TaskAdd()">+</button>
+
+        
+    </div>
+
+    <div id="Tasks" class="Preview"></div>
+
+    <script>
+            
+        function TaskAdd() {
+            let Task = document.getElementById("ToDoList").value;
+
+            if (Task.trim() !== "") {
+                document.getElementById("Tasks").innerHTML +=
+                    '<input type="checkbox"> ' + Task +'<br>';
+            }
+
+            document.getElementById("ToDoList").value = "";
+        }
+        
+
+    </script>
+    
+</body>
+</html>
